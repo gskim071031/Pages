@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>
+    Lewis, G. N. (1916). The Atom and the Molecule
+</title>
+</head>
+
+<style>
+
+    /* === body === */
+
+    body {
+        font-family: serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+
+    /* === figure === */
+
+    figure {
+        text-align: center; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+
+    /* === .lewis-strc === */
+    /* ab = abbreviation */
+    /* ol = one-letter */
+    /* b = bold */
+
+    .lewis-strc {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 1.8;
+    }
+    .lewis-strc.ab { line-height: unset; }
+    .lewis-strc.ol { line-height: 1.3; }
+
+    .lewis-strc span {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        width: 1.5em;
+    }
+    .lewis-strc.ab span { width: unset; }
+    .lewis-strc.ol span { width: 1em; }
+    .lewis-strc.b span { font-weight: bold; }
+
+    /* uet = unpaired-elctron-top
+       ueb = unpaired-elctron-bottom
+       ept = electron-pair-top
+       epb = electron-pair-bottom */
+    .lewis-strc span.uet::before,
+    .lewis-strc span.ueb::after {
+        content: "·";
+    }
+    .lewis-strc span.ept::before,
+    .lewis-strc span.epb::after {
+        content: "··";
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-weight: normal;
+    }
+    .lewis-strc span.uet::before,
+    .lewis-strc span.ueb::after,
+    .lewis-strc span.ept::before,
+    .lewis-strc span.epb::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-weight: normal;
+    }
+    .lewis-strc span.uet::before { top:    -0.9em; }
+    .lewis-strc span.ueb::after  { bottom: -0.9em; }
+    .lewis-strc span.ept::before { top:    -0.9em; }
+    .lewis-strc span.epb::after  { bottom: -0.9em; }
+    .lewis-strc.ol span.uet::before { top:    -0.65em; }
+    .lewis-strc.ol span.ueb::after  { bottom: -0.65em; }
+    .lewis-strc.ol span.ept::before { top:    -0.65em; }
+    .lewis-strc.ol span.epb::after  { bottom: -0.65em; }
+
+</style>
+
+<body>
+
+<h1 style="text-align: center;">
+    The Atom and the Molecule
+</h1>
+
+<p style="text-align: center;">
+    by Gilbert N. Lewis<br>
+    <i>Journal of the American Chemical Society</i><br>
+    Volume 38, 1916, pages 762-786<br>
+    Received January 26, 1916
+</p>
+
+<hr>
+
+<p>
+    In a paper entitled "Valence and Tautomerism" I took occasion to point out the great importance of substituting for the conventional classification of chemical substances, as inorganic or organic, the more general classification which distinguishes between polar and nonpolar substances. 
+    The two classifications roughly coincide, since most inorganic substances are distinctly polar, while the majority of organic substances belong to the nonpolar class; thus potassium chloride represents the extreme polar type and methane the nonpolar. 
+    Nevertheless, there are many inorganic substances which, under ordinary circumstances, are predominantly nonpolar, and many organic substances which, at least in a certain part of the molecule, are strongly polar.
+</p>
+
+<p>
+    This article was apparently unknown to Sir. J. J. Thomson when he wrote, in 1914, an extremely interesting paper on the "Forces between Atoms and Chemical Affinity" in which he reached conclusions in striking accord with my own and discussed in considerable detail the theories of atomic and molecular structure which led him to those conclusions.
+</p>
+
+<p>
+    To enable us to appreciate the importance and usefulness of a distinction between the polar and nonpolar types of chemical molecules no hypotheses are necessay, but in a more minute examination of the nature of such a distinction some theory of atomic structure is indispensable. 
+    Such a theory I have employed for a number of years in the interpretation of chemical phenomena, but it has not hitherto been published. 
+    I shall present this theory briefly in the present paper, for, while it bears much resemblance to some current theories of the atom, it shows some radical points of departure from them As an introduction it will be desirable to review the characteristics of polar and nonpolar compounds.
+</p>
+
+<h3 style="text-align: center;">
+    Polar and Nonpolar Types
+</h3>
+
+<p>
+    The very striking differences in properties between extreme polar and the extreme nonpolar types are summarized in the following table quoted from my previous paper:
+</p>
+
+<style>
+    .polar-non {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .polar-non th, td {
+        padding: 1px 10px
+    }
+</style>
+<table class="polar-non">
+<tr> <th>Polar                   </th> <th>Nonpolar               </th> </tr>
+<tr> <td>Mobile                  </td> <td>Immobile               </td> </tr>
+<tr> <td>Reactive                </td> <td>Inert                  </td> </tr>
+<tr> <td>Condensed structure     </td> <td>Frame Structure        </td> </tr>
+<tr> <td>Tautomerism             </td> <td>Isomerism              </td> </tr>
+<tr> <td>Electrophiles           </td> <td>Non-electrophiles      </td> </tr>
+<tr> <td>Ionized                 </td> <td>Not ionized            </td> </tr>
+<tr> <td>Ionizing solvents       </td> <td>Nonionizing solvents   </td> </tr>
+<tr> <td>High dielectric constant</td> <td>Low dielectric constant</td> </tr>
+<tr> <td>Molecular complexes     </td> <td>No molecular complexes </td> </tr>
+<tr> <td>Association             </td> <td>No association         </td> </tr>
+<tr> <td>Abnormal liquids        </td> <td>Normal liquids         </td> </tr>
+</table>
+
+<p>
+    All of these properties with respect to which fundamental distinctions have been made between the two types, and which seem so unconnected, are in fact closely related, and the differences are all due to a single cause. 
+    Even before making any special hypothesis we may very safely assume that the essntial difference between the polar and the nonpolar molecule is that, in the former, one or more electrons are held by sufficiently weak constratints so that they may become separated from their former positions in the atom, and in the extreme case pass altogether to another atom, this producing in the molecule a bipole or multipole of high electrical moment. 
+    Thus in an extremely polar molecule, such as that of sodium chloride, it is probable that at least in the great majority of molecules the chlorine atom has acquired a unit negative charge and therefore the sodium atom a unit positive charge, and that the process of ionization consists only in a further separation of these charged parts.
+</p>
+
+<p>
+    If then we consider the nonpolar molecule as one in which the electrons belonging to the individual atoms are held by such constraints that they do not ove far from their normal positions, while in the polar moleculethe electrons, being more mobile, so move as to separate the molecule into positive and negative parts, then all the distinguishing properties of the two types of compounds become necessary consequences of this assumption, as we may readily show.
+</p>
+
+<p>
+    Thus polar compounds with their mobile electrons fall readily into those combinations which represent the very few stable states, while the nonpolar molecules, in which the parts are held by firmer constraints, are inert and unreactive, and can therefore be built up into the numerous complicated structures of organic chemistry. 
+    Many organic compounds, especially those containing elements like oxygen and nitrogen, and those which are said to be unsaturated, show at least in some part of the molecule a decidedly polar character. 
+    In such cases we have the phenomena of tautomerism, where two or more foms of the molecule pass readily into one another and exists together in a condition of mobile equilibrium. 
+    Tautomerism is not characteristic of organic substances, but is, on the other hand, a predominate trait of most inorganic substances, which behave as if a great variety of forms were existing to gether in extremely mobile equilibrium.
+</p>
+
+<p>
+    When a molecule owing to the displacement of an electron, or electrons, becomes a bipole (or multipole) of high electrical moment, that is, when its charged parts are separtated by an appreciable distance, its force of attraction for another molecular bipole will be felt over a considerable intervening distance, and two or more such bipoles will frequently be drawn to gether into a single aggregate in which the positive part of one molecule is brought as near as possible to the negative part of another. 
+    The molecules of a polar substance will therefore not only exhibit an unusually high intermolecular attraction at a distance, but will frequently combine with one another and show the phenomenon known as association. 
+    It is indeed the substances which are distinctly polar, like ammonia, water, acids, and alcohols, which constitute, on account of association as well as of high intermolecular attraction, a class of liquids which are called abnormal with respect to numerous properties such as critical point, vapor pressure, heat of vaporization, viscosity, and surface tension.
+</p>
+
+<p>
+    Moreover a polar substance will combine with other substances to form those aggregates which are sometimes known as molecular compound or complexes, and it may so combine with substances which are not of themselves markedly polar, for in the presence of a polar substance all other substances become more polar.
+</p>
+
+<p>
+    This important effect of polar molecules in rendering others more polar, which I called attention in my previous paper, has been discussed in some detail by Thomson. 
+    A molecular bipole of small molecular moment, which would scarcely attract a similar molecule, will be very appreciably attracted by a polar molecule or bipole of high moment, and may form with it a double molecule. 
+    In this process the weaker bipole stretches and its moment increases. 
+    In general, if two molecules combine, or even approach one another, each weakens the constraints which hold together the charge of the other, and the electrical moment of each is increased.
+</p>
+
+<figure>
+    <img src="https://www.chemteam.info/Chem-History/Lewis-1916/Lewis-Fig1-1916.GIF">
+    <figcaption>Fig. 1</figcaption>
+</figure>
+
+<p>
+    This increase in the polar character of a molecule when combined with, or in the neighborhood of, other polar molecules is to a remarkable degree cumulative, for when two molecules by their approach or combination become more polar they draw other molecules more strongly towards them, but this still further increases their polar character. 
+    This is strikingly illustrated in numerous phenomena. 
+    Thus two substances in the gaseous state may differ but little in polar character, but when they are condensed liquids the differences are frequently enormous. 
+    The polar character of a substance depends, therefore, not only upon the specific properties of the individual molecules, but also upon what we may call the strength of the polar environment. 
+    Without attempting give any quantitative definition of our terms we may plot, in Fig. 1, the degree of polarity of a substance as ordinate and the strength of the polar environment as abscissa. 
+    We then have for all substances a curve of the type shown in the figure where the dotted line represents the highest degree of polarity, namely complete ionization. 
+    Different pure substances in the liquid state come at different points, thus, roughly, hexane at A; benzene at B; ether at C; esters at D; water, ammonia, alcohols, amines, acids between D and F; and fused salts at G. 
+    In the last case, since the substance has nearly reached its highest possible polarity, it will not be much affected by an increase in the strength of the polar environment. 
+    At the other end of the curve a substance at A in a strong polar environment may move to B, and one at B may move to C, but they would not become markedly polar. 
+    It is in the intermediate range that substances are most affected by small changes in the environment. 
+    Thus hydrochloric acid, which in the pure state is not extremely polar, reaches nearly the highest possible state of polarity when dissolved in water. 
+    Such a change in this region is often much accentuated by the formation of complexes, and thus we have the rule of Abegg and Bodländer that a weak electrolyte usually becomes a strong electrolyte when its weak ion is converted into a complex ion.
+</p>
+
+<p>
+    We come then to, the consideration of the electrical properties which distinguish polar from nonpolar substances, or, in accordance with the terminology which I formerly used, which distinguish good electrophiles from poor electrophiles.
+</p>
+
+<p>
+    The first difference is in the dielectric constant. 
+    The difference between the dielectric constant of a substance and that of free space measures directly the number of free charges in the substance multiplied by the average distance through which these charges move under the influence of a definite electric field. 
+    In the polar molecule the constraints which operate against a separation of the charges, being already weak, may be further stretched in the electric field, and what is more important, the bipoles (or multipoles) which already exist in the polar substance may, by rotation, orient themselves in the electric field, thus producing a large displacement current and therefore a high dielectric constant. 
+    In this connection Thomson has called attention to the work of Baedeker, which, shows that even in the gaseous state such substances as ammonia, water and hydrochloric acid possess an abnormally high dielectric constant.
+</p>
+
+<p>
+    Finally the polar substance, whether in the pure state or dissolved in another solvent, will obviously be the one which will be readily ionized. 
+    Moreover, polar substances are the strong ionizing solvents, for when another substance is combined with a highly polar substance, or even dissolved in such a solvent without actual combination of molecules, the degree of its own polarity largely increases.
+</p>
+
+<p>
+    Wide apart as the polar and nonpolar types are in the extreme, we must nevertheless inquire whether the difference is one of kind or one of degree. 
+    If there were a sharp and always recognizable distinction between the polar and the nonpolar molecule then a substance would be more polar or less polar according as it possessed a greater or smaller percentage of molecules of the first type. 
+    This would be a simple and in many cases a satisfactory interpretation of the difference in behavior between different substances, but scanning the whole field of chemical phenomena we are, I believe, forced to the conclusion that the distinction between the most extreme polar and nonpolar types is only one of degree, and that a single molecule, or even a part of a molecule, may pass from one extreme type to another, not by a sudden and discontinuous change, but by imperceptible gradations. 
+    The nature of such a transition we shall discuss in the following sections:
+</p>
+
+<h3 style="text-align: center;">
+    The Cubical Atom
+</h3>
+
+<p>
+    A number of years ago, to account for the striking fact which has become known as Abegg's law of valence and countervalence, and according to which the total difference between the maximum negative and positive valences or polar numbers of an element is frequently eight and is in no case more than eight, I designed what may be called the theory of the cubical atom. 
+    This theory, while it has become familiar to a number of my colleagues, has never been published, partly because it was in many respects incomplete. 
+    Although many of these elements of incompleteness remain, and although the theory lacks to-day much of the novelty which it originally possessed, it seems to me more probable intrinsically than some of the other theories of atomic structure which have been proposed, and I cannot discuss more fully the nature of the differences between polar and nonpolar compounds without a brief discussion of this theory.
+</p>
+
+<figure>
+    <img src="https://www.chemteam.info/Chem-History/Lewis-1916/Lewis-Fig2-1916.GIF">
+    <figcaption>Fig. 2</figcaption>
+</figure>
+
+<p>
+    The pictures of atomic structure which are reproduced in Fig. 2,<sup><a href="#fn1">1</a></sup> and in which the circles represent the electrons in the outer shell of the neutral atom, were designed to explain a number of important laws of chemical behavior with the aid of the following postulates:
+
+    <ol>
+    <li>
+        In every atom is an essential <i>kernel</i> which remains unaltered in ordinary chemical changes and which possesses an excess of positive charges corresponding in number to the ordinal number of the group in the periodic table to which the element belongs.
+    </li>
+    <li>
+        The atom is composed of the kernel and an <i>outer atom</i> or <i>shell</i>, which in the case of the neutral atom, contains negative electrons equal in number to the excess of positive charges of the kernel, but the number of electrons in the shell may vary during chemical change between 0 and 8.
+    </li>
+    <li>
+        The atom tends to hold an even number of electrons in the shell and especially to hold eight electrons which are normally arranged symmetrically at the eight corners of a cube.<sup><a href="#fn2">2</a></sup>
+    </li>
+    <li>
+        Two atomic shells are mutually interpenetrable.
+    </li>
+    <li>
+        Electrons may ordinarily pass with readiness from one position in the outer shell to another. 
+        Nevertheless they are held in position by more or less rigid constraints, and these positions and the magnitude of the constraints are determined by the nature of the atom and of such other atoms as are combined with it.
+    </li>
+    <li>
+        Electric forces between particles which are very close together do not obey the simple law of inverse squares which holds at greater distances.
+    </li>
+    </ol>
+
+    <p id="fn1" style="font-size: 13px;">
+        <sup>1</sup>
+        These figures are taken from a memorandum dated March 28, 1902, together the models are notes concerning different types of chemical compounds; the various possible arrangements of electrons in the outer atom and the possibility of intra-atomic isomerism; the relationship between symmetrical structure and atomic volume, and certain speculations as to the structure of the helium atom which we shall see were probably partly incorrect. 
+        The date of origin of this theory is mentioned not with the purpose of claiming any sort of priority with respect to those portions which overlap existing theories, but because the fact that similar theories have been developed independently adds to the probability that all possess some characteristics of fundamental reality.
+    </p>
+    
+    <p id="fn2" style="font-size: 13px;">
+        <sup>2</sup>
+        We shall see later the advisability of modifying this assumption of the cubic arrangement of the fundamental group of eight electrons.
+    </p>
+</p>
+
+<p>
+    Some further discussion of these postulates is necessary in order to make their meaning clear. 
+    The first postulate deals with the two parts of the atom which correspond roughly with the inner and outer rings of the Thomson atom. 
+    The kernel being that part of the atom which is unaltered by ordinary chemical change is of sufficient importance to merit a separate symbol. 
+    I propose that the common symbol of the element printed in a different type be used to represent the kernel. 
+    Thus <b>Li</b> will stand for the lithium kernel. 
+    It has a single positive charge and is equivalent to pure lithium ion Li<sup>+</sup>. 
+    <b>Be</b> has two positive charges, <b>B</b> three, <b>C</b> four, <b>N</b> five, <b>O</b> six and <b>F</b> seven.
+</p>
+
+<p>
+    We might expect the next element in the series, neon, to have an atomic kernel with eight positive charges and an outer shell consisting of eight electrons. 
+    In a certain sense this is doubtless the case. 
+    However, as has been stated in Postulate 3, a group of eight electrons in the shell is extremely stable, and this stability is the greater the smaller the difference in charge between the nucleus and this group of eight electrons. 
+    Thus in fluoride ion the kernel has a charge of +7, and the negative charge of the group of eight electrons only exceeds it by one unit. 
+    In fact in compounds of fluorine with all other elements, fluorine is assigned the polar number -1. 
+    In the case of oxygen, where the group of eight electrons has a charge exceeding that of the kernel by two units, the polar number is considered to be -2 in nearly every compound. 
+    Nitrogen is commonly assumed to have the polar number -3 in such compounds as ammonia and the nitrides. 
+    It may be convenient to assign occasionally to carbon the polar number -4, but it has never been found necessary to give boron a polar number -5, or beryllium -6, or lithium -7. 
+    But neon, with an inner positive charge of 8 and an outer group of eight electrons, is so extremely stable that it may, as a whole, be regarded as the kernel of neon and we may write <b>Ne</b> = Ne.<sup><a href="#fn3">3</a></sup>
+
+    <p id="fn3" style="font-size: 13px;">
+        <sup>3</sup>
+        It must not be assumed, even in the case of the elements here chosen for discussion, that the distinction between kernel and shell is absolutely hard and fast. 
+        Thus in the ionization of neon by electric discharge electrons must be thrown off from the group which we consider as belonging to the kernel itself.
+    </p>
+</p>
+
+<p>
+    The next element, sodium, begins a new outer shell<sup><a href="#fn4">4</a></sup> and <b>Na</b> = Na<sup>+</sup>, <b>Mg</b> = Mg<sup>++</sup>, and so on. 
+    In my original theory I considered the elements in the periodic table thus built up, as if block by block, forming concentric cubes. 
+    Thus potassium would be like sodium except that it would have one more cube in the kernel. 
+    This idea, as we shall see, will have to be modified, but nevertheless it gives a concrete picture to illustrate the theory.
+
+    <p id="fn4" style="font-size: 13px;">
+        <sup>4</sup>
+        The periodicity in the table of elements, due to successive additions of groups of eight electrons to the atomic kernel, is imitated closely by compounds. 
+        Thus ammonium ion has nine positive charges in the kernels and eight electrons in the shells, but these eight electrons forming a stable group make ammonium ion entirely analogous to the kernel of an alkali metal.
+    </p>
+</p>
+
+<p>
+    We have then as kernels<sup><a href="#fn5">5</a></sup> with a single positive charge <b>H, Li, Na, K, Rb, Cs</b>; with two positive charges <b>Be, Mg, Ca, Sr, Ba</b>; with three charges <b>B, Al, Sc</b>; with four charges <b>C, Si</b>; with five charges <b>N, P, As, Sb, Bi</b>; with six charges <b>O, S, Se, Te</b> and a group of radioactive isotopes; with seven charges <b>F, Cl, Br, I</b>; and with zero charge <b>He, Ne, Ar, Kr, Xe and Nt</b>. 
+    These elements only will be discussed in the present paper. 
+    The remaining elements form a class in which the atomic kernel is probably neither uniquely determined nor invariable during chemical change. 
+    This is one of the elements of incompleteness in the theory. 
+    Nevertheless this classification is not arbitrary but forced upon us, and the elements which are included furnish so large a part of the material upon which the science of chemistry is based, that the study of their compounds offers in itself a problem of great importance.
+
+    <p id="fn5" style="font-size: 13px;">
+        <sup>5</sup>
+        I believe that it will be easily remembered that the sodium kernel has one positive charge, that of chlorine seven positive charges, etc.; but, it may occasionally be desirable for pedagogical purposes to attach to the symbol of the atomic kernel, a small numeral as an index, to show the number of charges.
+    </p>
+</p>
+
+<p>
+    Postulate 2 cannot be fully discussed except in connection with the fourth postulate, but assuming that we understand the meaning of the reduction or oxidation of an element (at least in the case of highly polar substances), reduction means an increase and oxidation a decrease in the number of electrons in the outer atom of the element. 
+    Thus for illustration, and with such reservations as will presently be shown necessary, we may state that chlorine has eight electrons in the outer shell in chlorides, six in hypochlorites, four in chlorites, two in chlorates and none in perchlorates.
+</p>
+
+<p>
+    Postulate 3 can best be illustrated by the use of formulae in which the electrons of the atomic shells are themselves considered as atoms of the element electricity with the symbol <b>E</b>. 
+    Just as with ordinary symbols we use two types of formulae, one the gross formula representing hardly more than the chemical composition of the substance, the other a structural formula in which we attempt to represent the relative positions of the atoms, so, we may, with the new symbols, employ the two types of formulae. 
+    We shall later discuss the structural formula, but at this point we may consider the gross formula involving the atomic kernels and the electrons of the outer atoms. 
+    Lithium has one positive charge in the kernel, fluorine has seven such charges, so that the neutral molecule of lithium fluoride we may represent <b>LiFE<sub>8</sub></b>. 
+    In lithium sulfate <b>S</b> and <b>O</b> each has six positive charges, and Li<sub>2</sub>SO<sub>4</sub> = <b>Li<sub>2</sub>SO<sub>4</sub>E<sub>32</sub></b>;  SO<sub>4</sub><sup>--</sup> = <b>SO<sub>4</sub>E<sub>32</sub></b>. In every substance in which each element has either its highest or its lowest polar number, <b>E</b> will appear in multiples of 8. 
+    Thus NH<sub>3</sub> = <b>NH<sub>3</sub>E<sub>8</sub></b>, H<sub>2</sub>O = <b>H<sub>2</sub>OE<sub>8</sub></b>, KOH = <b>KOHE<sub>8</sub></b>, NaNO<sub>3</sub> = <b>NaNO<sub>3</sub>E<sub>24</sub></b>, AlO<sub>3</sub>H<sub>3</sub> = <b>AlO<sub>3</sub>H<sub>3</sub>E<sub>24</sub></b>, MgCl<sub>2</sub> = <b>MgCl<sub>2</sub>E<sub>16</sub></b>, K<sub>2</sub>CO<sub>3</sub> = <b>K<sub>2</sub>CO<sub>3</sub>E<sub>24</sub></b>. 
+    In compounds in which the elements have polar numbers intermediate between the highest and the lowest the number of electrons is not as a rule a multiple of 8, but is in almost all cases <i>an even number</i>. 
+    Thus SO<sub>2</sub> = <b>SO<sub>2</sub>E<sub>18</sub></b>, NaClO = <b>NaClOE<sub>14</sub></b>, C<sub>2</sub>H<sub>2</sub> = <b>C<sub>2</sub>H<sub>2</sub>E<sub>10</sub></b>, C<sub>6</sub>H<sub>6</sub>O = <b>C<sub>6</sub>H<sub>6</sub>OE<sub>36</sub></b>.
+</p>
+
+<p>
+    The extraordinary generality of this rule is shown by the fact that among the tens of thousands of known compounds of the elements under consideration only a few exceptions are known. 
+    I may state here all of such compounds that are known to me as they form a very interesting class of substances. 
+    They all possess high reactivity and tend to go over into substances with an even number of electrons. 
+    First may be mentioned some of the elements themselves in the monatomic state, and as types we may take Na = <b>NaE</b> and I = <b>IE<sub>7</sub></b>.
+    In addition to these,<sup><a href="#fn6">6</a></sup> we have NO = <b>NOE<sub>11</sub></b>, NO<sub>2</sub> = <b>NO<sub>2</sub>E<sub>17</sub></b>, ClO<sub>2</sub> = <b>ClO<sub>2</sub>E<sub>19</sub></b>, (C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>C = <b>(C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>CE<sub>91</sub></b> as well as other tri-aryl methyls and probably also the intensely colored compounds between alkali metals and di-aryl ketones, and the colored substances which Wieland believes to contain bivalent and quadrivalent nitrogen.
+
+    <p id="fn6" style="font-size: 13px;">
+        <sup>6</sup>
+        Possibly hypophosphoric acid is to be added to this list, but the evidence concerning its molecular weight does not seem conclusive.
+    </p>
+</p>
+
+<p>
+    It is to be particularly noted that such substances when placed in a polar environment almost invariably change into substances with an even number of electrons in the outer atoms. 
+    Thus NO<sub>2</sub> dissolved in water gives nitrous and nitric acids, and even in pure liquid nitrogen tetroxide we must assume, since it has electrical conductivity, that such ions as NO<sub>2</sub><sup>+</sup> = <b>NO<sub>2</sub>E<sub>16</sub></b> and NO<sub>2</sub><sup>-</sup> = <b>NO<sub>2</sub>E<sub>14</sub></b> are present. 
+    Similarly, ClO<sub>2</sub> dissolves to form chlorous and chloric acids to a small extent, triphenyl methyl dissolves in liquid sulfur dioxide to form a conducting solution with ions presumably of the type (C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>C<sup>+</sup> and (C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>C<sup>-</sup>. 
+    Sodium in the metallic state, or when dissolved in such a solvent as liquid ammonia, dissociates according to the equation <b>NaE</b> = <b>Na</b> + <b>E</b>. 
+    In general, therefore, we may state that a substance, in whose gross formula an odd number of electrons appears, holds one electron by weak constraints, and in a medium which weakens all electric constraints, namely in a polar medium, the odd electron may be given up completely. 
+    Of the cases mentioned, the odd electron appears to be most firmly bound in NO, and even in a polar environment the constraints are still sufficiently powerful to hold the electron. 
+    Nevertheless in the presence of any oxidizing agent such as oxygen, that is, in the presence of a substance which has a strong tendency to take up an electron, the interchange will occur at once.
+</p>
+
+<p>
+    Molecules of this class which contain an odd or unpaired electron will for the sake of brevity be called <i>odd</i> molecules. 
+    An odd molecule will contain at least one atom with an uneven number of electrons in the shell. 
+    This may be called an <i>odd</i> atom.
+</p>
+
+<p>
+    Postulate 4 raises a question of the very greatest importance. 
+    Ever since the first suggestion of Helmholtz, numerous efforts have been made to explain chemical combination by the assumption that in the formation of a compound some of the electrons of one atom pass completely into an other atom, and that the different charged parts of the molecule thus produced are held together by electrical forces. 
+    Such theories have, in my opinion, proved entirely inadequate except in the case of substances of the strongly polar type. 
+    This fact has been recognized by Thomson in his latest paper, in which he introduces an entirely different type of chemical combination in the case of the compounds which we have called nonpolar. 
+    However, according to the theory which I am now presenting, it is not necessary to consider the two extreme types of chemical combination, corresponding to the very polar and the very nonpolar compounds, as different in kind, but only as different in degree. 
+    This is due to the assumption of the interpenetrability of the atomic shells which is made in Postulate 4. 
+    Thus an electron may form a part of the shell of two different atoms and cannot be said to belong to either one exclusively. 
+    Hence in general it is impossible to say that one element in a compound has, during chemical change, been oxidized or reduced and that another element has not suffered such a change; but it is only as we approach substances of the completely polar type that such distinctions become less and less ambiguous. 
+    Since this question is one to which we shall frequently revert it need not be discussed further at this point. 
+</p>
+
+<p>
+    Postulate 5 is based upon the fact that we do not find what might be called intra-atomic isomers. 
+    If the electrons of the atomic shell could at one time occupy one set of positions and at another time another set and if there were no opportunity for ready transition from one of these sets of positions to another, we should have a large number of isomers differing from one another only in the situation of the electrons in the atomic shell. 
+    While there may possibly be a few cases where we might surmise the existence of just such isomers, in most cases it is evident that they do not exist, and we must assume, therefore, considerable freedom of change from one distribution of electrons in the shell to another.
+</p>
+
+<p>
+    Now there are only two ways in which one body can be held by another. 
+    It may, owing to a force of attraction, be drawn toward the second body until this force is gradually offset by a more rapidly increasing force of repulsion. 
+    In this case it comes to rest at a point where the net attraction or repulsion is zero, and is therefore in a condition of constraint with respect to any motion along the line joining the two centers; for if the distance between the two bodies is diminished they repel one another, while if the distance is increased they are attracted toward one another. 
+    An example of this type is a body attracted toward the earth but resting upon an elastic substance where the attractive force of gravity is offset by the repulsive force which we happen to call elastic; but it would be a mistake to consider the forces of elasticity to be different in character from other known forces. 
+    Indeed it is evident that just as we have the law of universal attraction between particles at great distances, so <i>at small distances</i> we have the equally universal <i>law of repulsion</i>.
+</p>
+
+<p>
+    The other way in which one body may hold another is that in which the planets are held by the sun, and this is the way that in some current theories of atomic structure the electrons are supposed to be held by the atom. 
+    Such an assumption seems inadequate to explain even the simplest chemical properties of the atom, and I imagine it has been introduced only for the sake of maintaining the laws of electromagnetics which are known to be valid at large distances. 
+    The fact is, however, that in the more prominent of these theories even this questionable advantage disappears, for the common laws of electricity are not preserved. 
+    The most interesting and suggestive of these theories is the one proposed by Bohr<sup><a href="#fn7">7</a></sup> and based upon Planck's quantum theory. 
+    Planck in his elementary oscillator which maintains its motion at the absolute zero, and Bohr in his electron moving in a fixed orbit, have invented systems containing electrons of which the motion produces no effect upon external charges. 
+    Now this is not only inconsistent with the accepted laws of electromagnetics but, I may add, is logically objectionable, for that state of motion which produces no physical effect whatsoever may better be called a state of rest.
+
+    <p id="fn7" style="font-size: 13px;">
+        <sup>7</sup>
+        I believe that there is one part of Bohr's theory for which the assumption of the orbital electron is not necessary, since it may be translated directly into the terms of the present theory. 
+        He explains the spectral series of hydrogen by assuming that an electron can move freely in any one of a series of orbits in which the velocities differ by steps, these steps being simply expressed in terms of ultimate units (in his theory Planck's <i>h</i> is such a unit), and that radiation occurs when the electron passes from one orbital velocity to the next. 
+        It seems to me far simpler to assume that an electron may be held in the atom in stable equilibrium in a series of different positions, each of which having definite constraints, corresponds to a definite frequency of the electron the intervals between the constraints in successive positions being simply expressible in terms of ultimate rational units.
+    </p>
+</p>
+
+<p>
+    Indeed it seems hardly likely that much progress can be made in the solution of the difficult problems relating to chemical combination by assigning in advance definite laws of force between the positive and negative constituents of an atom, and then on the basis of these laws building up mechanical models of the atom. 
+    We must first of all, from a study of chemical phenomena, learn the structure and the arrangement of the atoms, and if we find it necessary to alter the law of force acting between charged particles at small distances, even to the extent of changing the sign of that force, it will not be the first time in the history of science that an increase in the range of observational material has required a modification of generalizations based upon a smaller field of observation. 
+    Indeed in the present case, entirely aside from any chemical reasons, a study of the mathematical theory of the electron leads, I believe, irresistably to the conclusion that Coulomb's law of inverse squares must fail at small distances.
+</p>
+
+<p>
+    In this connection I wish to call attention to an extremely interesting paper by Mr. A. L. Parson which has only just been published, but which I had an opportunity of looking over with the author over a year ago. 
+    The fundamental assumption of Parson's theory is that the electron is not merely an electric charge but is also a small magnet, or, in his terminology, a magneton. 
+    Assuming therefore the existence of magnetic as well as electric forces between the different parts of the atom, Parson was led entirely independently to the conclusion which I have stated above, namely that the most stable condition for the atomic shell is, the one in which eight electrons are held at the corners of a cube. 
+    Not only in this but in a number of other important points the theory which I am presenting will be seen to coincide with that of Parson's paper. 
+    The results of the magnetic experiments with which he proposes to test the magneton theory will be of great interest. 
+    Meanwhile we may attempt to find, apart from any <i>a priori</i> consideration, just what atomic structure best explains known chemical facts.
+</p>
+
+<p>
+    There is one part of Parson's theory which agrees with my own former theory but which I now believe to be incorrect. 
+    The idea that argon is a system of concentric cubes (in Parson's theory cubes side by side), and that neon is a similar system with one less cube, led naturally to the assumption that helium is similarly constituted. 
+    But recent evidence from radioactive phenomena, and from Moseley's study of the X-ray spectrum, makes it seem almost certain that helium has a total not of eight but of either two or four electrons.<sup><a href="#fn8">8</a></sup> 
+    Assuming that helium is the only element between hydrogen and lithium and that it has two electrons, then it is evident from the inert character of helium, and from the resemblance of this element to the other inert gases, that here the pair of electrons plays the same role as the group of eight in the heavier atoms, and that in the row of the periodic table comprising hydrogen and helium we have in place of the rule of eight the rule of two. 
+    Therefore hydrogen not only has one electron in its outer shell, which may pass into the shell of another atom just as the electron of lithium or sodium may, but it is capable of taking up one electron to form the stable pair, just as fluorine or chlorine takes up one electron to form the stable group of eight. 
+    Hydrogen therefore must be regarded as the first member of the halogens as well as of the lithium group. 
+    According to this view lithium hydride is a salt<sup><a href="#fn9">9</a></sup> although perhaps less polar than lithium fluoride or chloride. 
+    Therefore in what follows we shall regard the acquisition of one additional electron by hydrogen as entirely analogous to the acquisition of enough electrons to form the group of eight in the case of other atoms.
+
+    <p id="fn8" style="font-size: 13px;">
+        <sup>8</sup>
+        Two, if hydrogen and helium are the only elements of lower atomic weight than lithium; four, if we assume with Rydberg that there are two rows in the periodic table, one containing hydrogen and proto-helium and one containing eka-hydrogen and helium. 
+        The above discussion will be the same on either of these assumptions, and although Rydberg's assumption has a very high degree of plausibility I have adopted for simplicity the more familiar one.
+    </p>
+
+    <p id="fn9" style="font-size: 13px;">
+        <sup>9</sup>
+        In order to test this view experiments have been begun by Professor O. F. Stafford. 
+        These experiments have not progressed far but they at least indicate that fused lithium hydride is a good electrolyte.
+    </p>
+</p>
+
+<h3 style="text-align: center;">
+    Molecular Structure
+</h3>
+
+<p>
+    I shall now attempt to show how, by a single type of chemical combination, we may explain the widely varying phenomena of chemical change. 
+    With the original assumption of Helmholtz, which has been used by some authors under the name of the electron theory of valence, and according to which a given electron either does or does not pass completely from one atom to another, it is possible to give a very satisfactory explanation of compounds which are of distinctly polar type, but the method becomes less and less satisfactory as we approach the nonpolar type. 
+    Great as the difference is between the typical polar and nonpolar substances, we may show how a single molecule may, according to its environment, pass from the extreme polar to the extreme nonpolar form, not <i>per saltum</i>, but by imperceptible gradations, as soon as we admit that an electron may be the common property of two atomic shells.
+</p>
+
+<p>
+    Let us consider first the very polar compounds. 
+    Here we find elements with but few electrons in their shells tending to give up these electrons altogether to form positive ions, and elements which already possess a number of electrons tending to increase this number to form the group of eight. 
+    Thus Na<sup>+</sup> and Ca<sup>++</sup> are kernels without a shell, while chloride ion, sulfide ion, nitride ion (as in fused nitrides) may each be represented by an atom having in the shell eight electrons at the corners of a cube.
+</p>
+
+<figure>
+    <img src="https://www.chemteam.info/Chem-History/Lewis-1916/Lewis-Fig3-1916.GIF">
+    <figcaption>Fig. 3</figcaption>
+</figure>
+
+<p>
+    As an introduction to the study of substances of slightly polar type we may consider the halogens. 
+    In Fig. 3 I have attempted to show the different forms of the iodine molecule I<sub>2</sub>. 
+    A represents the molecule as completely ionized, as it undoubtedly is to a measurable extent in liquid iodine<sup>1</sup>. 
+    Without ionization we may still have one of the electrons of one atom fitting into the outer shell of the second atom, thus completing its group of eight as in B. 
+    But at the same time an electron of the second atom may fit into the shell of the first, thus satisfying both groups of eight and giving the form C which is the predominant and characteristic structure of the halogens. 
+    Now notwithstanding the symmetry of the form C, if the two atoms are for any reason tending to separate the two common electrons may cling more firmly sometimes to  one of the atoms, sometimes to the other, thus producing some dissymmetry in the molecule as a whole, and one atom will have a slight excess of positive charge, the other of negative. 
+    This separation of the charges and the consequent increase in the polar character of the molecule will increase as the atoms become separated to a greater distance until complete ionization results.<sup><a href="#fn10">10</a></sup> 
+    Thus between the perfectly symmetrical and nonpolar molecule C and the completely polar and ionized molecule represented by A there will be an infinity of positions representing a greater or lesser degree of polarity. 
+    Now in a substance like liquid iodine it must not be assumed that all of the molecules are in the same state, but rather that some are highly polar, some almost nonpolar, and others represent all gradations between the two. 
+    When we find that iodine in different environments shows different degrees of polarity, it means merely that in one medium there is a larger percentage of the more polar forms. 
+    So bromine, although represented by an entirely similar formula, is less polar than iodine. 
+    In other words, in the average molecule the separation of the charge is less than in the case of iodine. 
+    Chlorine and fluorine are less polar than either and can be regarded as composed almost completely of molecules of the form C.
+
+    <p id="fn10" style="font-size: 13px;">
+        <sup>10</sup>
+        When the separation occurs in a nonpolar environment the atoms may separate in such a way that each retains one of the two common electrons, as in the thermal dissociation of iodine gas.
+    </p>
+</p>
+
+<p>
+    I wish to emphasize once more the meaning that must be ascribed to the term tautomerism. 
+    In the simplest case where we deal with a single tautomeric change we speak of the two tautomers and sometimes write definite formulae to express the two. 
+    But we must not assume that all of the molecules of the substance possess either one structure or the other, but rather that these forms represent the two limiting types, and that the individual molecules range all the way from one limit to the other. 
+    In certain cases where the majority of molecules lie very near to one limit or to the other, it is very convenient and desirable to attempt to express the percentage of the molecules belonging to the one or to the other tautomeric form; but in a case where the majority of molecules lie in the intermediate range and relatively few in the immediate neighborhood of the two limiting forms, such a calculation loses most of its significance.
+</p>
+
+<p>
+    With the halogens it is a matter of chance as to which of the atoms acquires a positive and which a negative charge, but in the case of a binary compound composed of different elements the atoms of one element will be positive in most, though not necessarily all, of the molecules. 
+    Thus in Br<sub>2</sub> the bromine atom is as often positive as negative, but in BrCl it will be usually positive and in IBr usually negative, although in all these substances which are not very polar the separation of charges in the molecule will be slight, whereas in the metallic halides the separation is nearly complete and the halogen atoms acquire almost complete possession of the electrons. 
+    In order to express this idea of chemical union in symbols I would suggest the use of a colon, or two dots arranged in some other manner, to represent the two electrons which act as the connecting links between the two atoms. 
+    Thus we may write Cl<sub>2</sub> as 
+    <span class="lewis-strc ab">
+        <span>Cl</span>:<span>Cl</span>
+    </span>.
+    If in certain cases we wish to show that one atom in the molecule is on the average negatively charged we may bring the colon nearer to the negative element. 
+    Thus we may write 
+    <span class="lewis-strc ab">
+        <span>Na</span> :<span>I</span>
+    </span>, and 
+    <span class="lewis-strc ab">
+        <span>I</span> :<span>Cl</span>
+    </span>. 
+    Different spacings to represent different degrees of polarity can of course be more freely employed at a blackboard than in type.
+</p>
+
+<p>
+    It will be noted that, since in the hydrogen-helium row we have the rule of two in the place of the rule of eight, the insertion of one electron into the shell of the hydrogen atom is entirely analogous to the completion of the cube in the case of the halogens. 
+    Thus we may consider ordinary hydrogen as a hydride of positive hydrogen in the same sense that chlorine may be regarded as a chloride of positive chlorine. 
+    But H<sub>2</sub> is far less polar even than Cl<sub>2</sub>. 
+    The three main types of hydrogen compounds may be represented therefore by 
+    <span class="lewis-strc ab">
+        <span>H</span> :<span>Cl</span>
+    </span>, 
+    <span class="lewis-strc ab">
+        <span>H</span>:<span>H</span>
+    </span>, and 
+    <span class="lewis-strc ab">
+        <span>Na</span> :<span>H</span>
+    </span>.
+</p>
+
+<p>
+    We may go further and give a complete formula for each compound by using the symbol of the kernel instead of the ordinary atomic symbol and by adjoining to each symbol a number of dots corresponding to the number of electrons in the atomic shell. 
+    Thus we may write 
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span>H</span>
+    </span>, 
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span class="ept epb">O</span>:<span>H</span>
+    </span>, 
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span class="ept epb">I</span>:
+    </span>, 
+    <span class="lewis-strc ol b">
+        :<span class="ept epb">I</span>:<span class="ept epb">I</span>:
+    </span>, but we shall see that in many cases such a formula represents only one of the numerous extreme tautomeric forms. 
+    For the sake of simplicity we may also use occasionally formulae which show only those electrons concerned in the union of two atoms, as in the preceding paragraphs.
+</p>
+
+<p>
+    It is evident that the type of union which we have so far pictured, although it involves two electrons held in common by two atoms, nevertheless corresponds to the single bond as it is commonly used in graphical formulae. 
+    In order to illustrate this point further we may discuss a problem which has proved extremely embarrassing to a number of theories of valence. 
+    I refer to the structure of ammonia and of ammonium ion. 
+    Ammonium ion may of course, on account of the extremely polar character of ammonia and hydrogen ion, be regarded as a loose complex due to the electrical attraction of the two polar molecules. 
+    However, as we consider the effect of substituting hydrogen by organic groups we pass gradually into a field where we may be perfectly certain that four groups are attached directly to the nitrogen atom, and these groups are held with sufficient firmness so that numerous stereochemical isomers have been obtained. 
+    The solution of this problem in terms of the theory here presented is extremely simple and satisfactory, and it will be sufficient to write an equation in terms of the new symbols in order to make the explanation obvious. 
+    Thus for NH<sub>3</sub> + H<sup>+</sup> = NH<sub>4</sub><sup>+</sup> we write
+    <span class="lewis-strc ol b">
+        <span></span> <span>H</span>&nbsp; <br>
+        <span>H</span>:<span class="ept epb">N</span>: <br>
+        <span></span> <span>H</span>&nbsp;
+    </span> + 
+    <span class="lewis-strc ol b">
+        <span>H</span>
+    </span> = 
+    <span class="lewis-strc ol b">
+        <span></span> <span>H</span> <span></span> <br>
+        <span>H</span>:<span class="ept epb">N</span>:<span>H</span> <br>
+        <span></span> <span>H</span> <span></span>
+    </span>.
+    When ammonium ion combines with chloride ion the latter is not attached directly to the nitrogen but is held simply through electric forces by the ammonium ion.
+</p>
+
+<p>
+    While the two dots of our formulae correspond to the line which has been used to represent the single bond, we are led through their use to certain formulae of great significance which I presume would not occur to anyone using the ordinary symbols. 
+    Thus it has been generally assumed that what is known as a bivalent element must be tied by two bonds to another element or elements, or remain with an "unsaturated valence." 
+    On the other hand, we may now write formulae in which an atom of oxygen is tied by only one pair of electrons to another atom and yet have every element in the compound completely saturated. 
+    To illustrate this important point we may write the formula of perchlorate, sulfate, orthophosphate and orthosilicate ions, in which each atom has a complete shell of eight electrons. 
+    Thus 
+    <span class="lewis-strc ol b">
+        <span></span>:<span class="ept">O</span>:<span></span> <br>
+        :<span class="ept epb">O</span>:<span class="ept epb">X</span>:<span class="ept epb">O</span>: <br>
+        <span></span>:<span class="epb">O</span>:<span></span>
+    </span> represents all of these ions. 
+    If <b>X</b> is <b>Cl</b> the ion has one negative charge; if <b>S</b> it has two negative charges, and so on. 
+    The union of sulfur trioxide to oxide ion to form sulfate ion is similar to the addition of ammonia and hydrogen ion to form ammonium ion The acids or acid ions are produced from the above ion by adding hydrogen ion; or <b>H</b>, to the oxygen atoms.
+</p>
+
+<figure>
+    <img src="https://www.chemteam.info/Chem-History/Lewis-1916/Lewis-Fig4-1916.GIF">
+    <figcaption>Fig. 4</figcaption>
+</figure>
+
+<p>
+    We may next consider the <i>double bond</i> in which four electrons are held conjointly by two atoms. 
+    Thus Fig. 4, A, may represent the typical structure of the molecule of oxygen. 
+    A characteristic feature of the double bond is its tendency to "break." 
+    When this happens in a symmetrical way, as it will, except in a highly polar environment, it leaves the two atoms concerned in the <i>odd</i> state, each with an unpaired electron in the shell. 
+    In so far as a substance with a double bond assumes this other tautomeric form, it will show all the properties of the substances with odd molecules. 
+    Thus Fig. 4, B, represents this tautomeric form of the oxygen molecule; the equilibrium between forms A and B is entirely analogous to the equilibrium between N<sub>2</sub>O<sub>4</sub> and NO<sub>2</sub>. 
+    At low temperatures almost every known case of combination with oxygen gives first a peroxide. 
+    This shows that oxygen exists to an appreciable degree in a form which approximates to the form B, in which it can add directly to other atoms precisely as ethylene forms addition compounds. 
+    These two forms of oxygen (which, of course, may merge into one another by continuous gradations) can be represented as 
+    <span class="lewis-strc ol b">
+        :<span class="ept">O</span>::<span class="ept">O</span>:
+    </span> and
+    <span class="lewis-strc ol b">
+        :<span class="ept ueb">O</span>:<span class="ept ueb">O</span>:
+    </span>, and the two forms of ethylene<sup><a href="#fn11">11</a></sup> as 
+    <span class="lewis-strc ol b">
+        <span></span> <span>H</span>&nbsp;&nbsp;<span>H</span> <span></span> <br>
+        <span>H</span>:<span class="ept">C</span>::<span class="ept">C</span>:<span>H</span>
+    </span> and
+    <span class="lewis-strc ol b">
+        <span></span> <span>H</span> <span>H</span> <span></span> <br>
+        <span>H</span>:<span class="ept ueb">C</span>:<span class="ept ueb">C</span>:<span>H</span>
+    </span>.
+
+    <p id="fn11" style="font-size: 13px;">
+        <sup>11</sup>
+        I shall postpone a discussion of the important bearing of such formulae upon the problem of the conjugate double bond.
+    </p>
+</p>
+
+<p>
+    The instability of multiple bonds and the underlying principle of Baeyer's Strain Theory we shall discuss presently, but before proceeding further in this direction it is important to consider the general relation between the strength of the constraints which hold a molecule together and the stability of the molecule. 
+    The term "stability" is used in two very different senses, according as we think of the tendency of a reaction to occur, or the speed of that reaction. 
+    We speak of nitric oxide as an extremely stable substance although it is thermodynamically unstable, and the free energy involved in its decomposition is enormous, but it is so inert that it suffers no appreciable change. 
+    A high degree of inertness means ordinarily very rigid constraints operating within the molecule, but these powerful forces may operate only over a very small distance so that the work done in overcoming them may be very small. To illustrate this point let us consider a piece of iron suspended by a magnet. 
+    It is drawn downwards by the force of gravity and upwards by the magnetic field, and while the net amount of work obtained by separating it from the magnet and allowing it to fall to earth may be positive, it nevertheless will not fall of itself, but can only be drawn from the magnet by a force far greater than that of gravitation. 
+    So in the case of the molecule, thermodynamic stability is closely associated with the <i>work</i> of breaking some bond, but the inertness of the molecule depends upon the <i>force</i> required to break that bond.
+</p>
+
+<p>
+    Before considering triple bonds, for which the cubical structure offers no simple representation, I wish to discuss some ideas in the recent development of which I am greatly indebted to suggestions made by Dr. L. Rosenstein, Dr. E. Q. Adams and Mr. F. R. von Bichowsky, as well as to the work of Mr. A. L. Parson, to which I have already referred. 
+    In my early theory the cube was the fundamental structure of all atomic shells. 
+    We have seen, however, in the case of elements with lower atomic weights than lithium, that the <i>pair</i> of electrons forms the stable group, and we may question whether in general the pair rather than the group of eight should not be regarded as the fundamental unit. 
+    Perhaps the chief reasons for assuming the cubical structure were that this is the most symmetrical arrangement of eight electrons, and is the one in which the electrons are farthest apart. 
+    Indeed it seems inherently probable that in elements of large atomic shell (large atomic volume) the electrons are sufficiently far from one another so that Coulomb's law of inverse squares is approximately valid, and in such cases it would seem probable that the mutual repulsion of the eight electrons would force them into the cubical structure. 
+</p>
+
+<p>
+    However, this is precisely the kind of <i>a priori</i> reasoning which we have decided not to employ in this paper, and when we consider only known chemical phenomena, and their best interpretation in terms of atomic structure, we are led to assume a somewhat different arrangement of the group of eight electrons, at least in the case of the more nonpolar substances whose molecules are as a rule composed of atoms of small atomic volume.
+</p>
+
+<figure>
+    <img src="https://www.chemteam.info/Chem-History/Lewis-1916/Lewis-Fig5-1916.GIF">
+    <figcaption>Fig. 5</figcaption>
+</figure>
+
+<p>
+    The nature of this arrangement is shown in Fig. 5. The cube representing the electron structure that we have hitherto assumed for the carbon atom is joined to four other atoms, which are not shown in the figure, but which are attached to the carbon atom each by a pair of electrons. 
+    These pairs are indicated by being joined by heavy lines. 
+    Assuming flow, at least in such very small atoms as that of carbon, that each pair of electrons has a tendency to be drawn together, perhaps by magnetic force if the magneton theory is correct, or perhaps by other forces which become appreciable at small distances, to occupy positions indicated by the dotted circles, we then have a model which is admirably suited to portray all of the characteristics of the carbon atom. 
+    With the cubical structure it is not only impossible to represent the triple bond, but also to explain the phenomenon of free mobility about a single bond which must always be assumed in stereochemistry. 
+    On the other hand, the group of eight electrons in which the <i>pairs</i> are symmetrically placed about the center gives identically the model of the tetrahedral carbon atom which has been of such signal utility throughout the whole of organic chemistry.
+</p>
+
+<p>
+    As usual, two tetrahedra, attached by one, two or three corners of each, represent respectively the single, the double and the triple bond. 
+    In the first case one pair of electrons is held in common by the two atoms, in the second case two such pairs, in the third case three pairs.
+</p>
+
+<p>
+    The triple bond represents the highest possible degree of union between two atoms. 
+    Like a double bond it may break one bond, producing two <i>odd</i> carbon atoms, but it may also break in a way in which the double bond cannot, to leave a single bond and two carbon atoms (bivalent), each of which has a pair of electrons which is not bound to any other atom. 
+    The three tautomeric forms may be represented in the case of acetylene by 
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span>C</span>:::<span>C</span>:<span>H</span>
+    </span>,
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span class="uet">C</span>::<span class="uet">C</span>:<span>H</span>
+    </span>, and
+    <span class="lewis-strc ol b">
+        <span>H</span>:<span class="ept">C</span>:<span class="ept">C</span>:<span>H</span>
+    </span>.
+    In addition we have a form corresponding to Nef's acetylidene and such forms as may exist in highly polar media, such as the acetylide ion 
+    <span class="lewis-strc ol b">
+        :<span>C</span>:::<span>C</span>:<span>H</span>
+    </span>.
+</p>
+
+<p>
+    The instability of multiple bonds, as well as the general phenomenon of ring formation in organic compounds is admirably interpreted by the Strain Theory of Baeyer. 
+    This theory may, however, be put into a far more general form if we make the simple assumption that <i>all atomic kernels repel one another,</i> and that molecules are held together only by the pairs of electrons which are held jointly by the component atoms. 
+    Thus two carbon atoms with a single bond strive to keep their kernels as far part as possible, and this condition is met when the adjoining corners of the two tetrahedra lie in the line joining the centers of the tetrahedra. 
+    This is an essential element of Baeyer's theory of ring formation. 
+    When a single bond changes to a multiple bond and the two atomic shells have two pairs of electrons in common, the kernels are forced nearer together and the mutual repulsion of these kernels greatly weakens the constraints at the points of junction. 
+    This diminution in constraint therefore produces a remarkable effect in increasing the mobility of the electrons. 
+    In any part of a carbon chain where a number of consecutive atoms are doubly bound there is in that whole portion of the molecule an extraordinary reactivity and freedom of rearrangement. 
+    This freedom usually terminates at that point in the chain where an atom has only single bonds and in which therefore the electrons are held by more rigid constraints, although it must be observed that an increased mobility of electrons (and therefore increased polarity) in one part of the molecule always produces some increase in mobility in neighboring parts.
+</p>
+
+<p>
+    Let us turn now to a problem in the solution of which the theory which I am presenting shows its greatest serviceability. 
+    The electrochemical theories of Davy and Berzelius were overshadowed by the "valence" theory when the attention of chemists was largely drawn to the nonpolar substances of organic chemistry. 
+    Of late the electrochemical theories have come once more into prominence, but there has always been that antagonism between the two views which invariably results when two rival theories are mutually exclusive, while both contain certain elements of truth. 
+    Indeed we may now see that with the interpretation which we are now employing the two theories need not be mutually exclusive, but rather complement one another, for the "valence" theory, which is the classical basis of structural organic chemistry, deals with the fundamental structure of the molecule, while electrochemical considerations show the influence of positive and negative groups in minor distortions of the fundamental form. 
+    Let us consider once for all that by a negative element or radical we mean one which tends to draw towards itself the electron pairs which constitute the outer shells of all neighboring atoms, and that an electropositive group is one that attracts to a less extent, or repels, these electrons. 
+    In the majority of carbon compounds there is very little of that separation of the charges which gives a compound a polar character, although certain groups, such as hydroxyl, as well as those containing multiple bonds, not only themselves possess a decidedly polar character, but increase, according to principles already discussed, the polar character of all neighboring parts of the molecule. 
+    However, in such molecules as methane and carbon tetrachloride, instead of assuming, as in some current theory, that four electrons have definitely left hydrogen for carbon in the first case, and carbon for chlorine in the second, we shall consider that in methane there is a slight movement of the charges toward the carbon so that the carbon is slightly charged negatively, and that in carbon tetrachloride they are slightly shifted towards the chlorine, leaving the carbon somewhat positive. 
+    We must remember that here also we are dealing with averages and that in a few out of many molecules of methane the hydrogen may be negatively charged and the carbon positively.
+</p>
+
+<p>
+    In a substance like water the electrons are drawn in from hydrogen to oxygen and we have in the limiting case a certain number of hydrogen atoms which are completely separated as hydrogen ion. 
+    The amount of separation of one of the hydrogen atoms, and therefore the degree of ionization, will change very greatly when the other hydrogen atom is substituted by a positive or negative group. 
+    As a familiar example we may consider acetic acid, in which one hydrogen is replaced by chlorine, H<sub>2</sub>ClCCOOH. 
+    The electrons, being drawn towards the chlorine, permit the pair of electrons joining the methyl and carboxyl groups to approach nearer to the methyl carbon. 
+    This pair of electrons, exercising therefore a smaller repulsion upon the other electrons of the hydroxyl oxygen, permit these also to shift in the same direction. 
+    In other words, all the electrons move toward the left, producing a greater separation of the electrons from the hydrogen of the hydroxyl, and thus a stronger acid. 
+    This simple explanation is applicable to a vast number of individual cases. 
+    It need only be borne in mind that although the effect of such a displacement of electrons at one end of a chain proceeds throughout the whole chain, it becomes less marked the greater the distance,<sup><a href="#fn12">12</a></sup> and the more rigid the constraints which hold the electrons in the intervening atoms.
+
+    <p id="fn12" style="font-size: 13px;">
+        <sup>12</sup>
+        The distance to be considered is the <i>actual</i> distance. 
+        Thus when a chain of five or six links assumes a ring-like form, the two ends have a great influence upon each other, as has been pointed out by Michael in numerous cases.
+    </p>
+</p>
+
+<p>
+    This brief account of the theory of atomic and molecular structure could be extended almost indefinitely by illustrations of its application to numerous types of compounds, but I believe enough has been said to show how, through simple hypotheses, we may explain the most diverse types of chemical union and how we may construct models whidh illustrate the continuous transition between the most polar and the most nonpolar of substances. 
+    I shall therefore conclude this paper with a brief discussion of a phenomenon which bears closely upon the ideas which have been presented here.
+</p>
+
+<h3 style="text-align: center;">
+    The Color of Chemical Compounds
+</h3>
+
+<p>
+    When a particle is held in position by definite constraints, it is capable of vibrating with a definite frequency, and this frequency is determined solely by the magnitude of the constraints<sup><a href="#fn13">13</a></sup> and by the mass of the particle. 
+    When such a particle is electrically charged and subjected to the alternating electromagnetic forces which constitute a beam of light, and when the frequency of the light is near to the characteristic frequency of the particle, the latter is set to vibrating and through frictional processes the energy of the light is absorbed.
+
+    <p id="fn13" style="font-size: 13px;">
+        <sup>13</sup>
+        If the constraints are not uniform in all directions there will in general be three fundamental frequencies corresponding to the three axes of constraint, along which the constraints are respectively at a maximum, at a minimum and at a minimax.
+    </p>
+</p>
+
+<p>
+    The two kinds of charged particles which exist in chemical substances are charged atoms and electrons. 
+    The former, on account of their relatively large mass, have low characteristic frequencies which are, as far as I am aware, always far below the frequencies of visible light and therefore cause absorption only in the ultrared spectrum. 
+    The electrons, on the other hand, because of their small mass and the rigid constraints by which they are ordinarily bound, usually have frequencies higher than those of visible light and therefore absorb light only in the ultraviolet. 
+    The majority of substances therefore show no special absorption of visible light and are therefore colorless.
+</p>
+
+<p>
+    When, however, either by a change in the constitution of the molecule or through a change in the environment, the constraints acting upon an electron become weaker, the frequency of that electron becomes less. 
+    It may then begin to absorb visible light of the highest frequency, namely the violet and blue, and the transmitted light is therefore yellow. 
+    Whenever a colorless substance becomes colored through slight changes by substitution of somewhat different groups within the molecule, or by gradual change in the environment, the substance is always <i>yellow</i>. 
+    But if the changes are made more pronounced and the characteristic frequency of the electron or electrons concerned is still further lowered, so that the maximum of absorption is in some other part of the visible spectrum, different colors will be produced, and ultimately when the electron is nearly freed from constraint, as in the case of an alkali metal dissolved in liquid ammonia, the maximum of absorption is in the ultra-red and red, and a blue color results.
+</p>
+
+<p>
+    Now colored substances are the very ones in which, according to our theory, the electrons are least firmly held. Thus such substances as nitrogen dioxide and sodium vapor, which contain an uneven number of electrons and which therefore hold one of the electrons very loosely, are colored. If, however, sodium combines with chlorine the electron becomes firmly held by the latter element and when nitrogen dioxide combines even with itself to form N<sub>2</sub>O<sub>4</sub> the electron is again firmly held and the color disappears. Indeed, with the exception of NO, every one of the substances with odd molecules which we have listed is colored. The tri-aryl methyls show a remarkable analogy to NO<sub>2</sub>. In nonpolar media they show an increase of color when the conditions so change as to increase the amount of the monomolecular or odd molecules. Thus the color is increased by rising temperature or by increasing dilution, but the color of these substances in a polar environment is due to another cause, the discussion of which would lead us into the whole question of the triphenyl methane dyes.
+</p>
+
+<p>
+    Turning now to substances containing an even number of electrons, we see in the case of the halogens how the intensity and character of the color vary with the polar character. Thus the electrons which are concerned in the union of the two atoms of iodine are held by weaker constraints than in the case of bromine, and so on through the group. The electrons in fluorine, being most firmly held, absorb only the extreme violet end of the visible spectrum.
+</p>
+
+<p>
+    In general, color and a high degree of polarity go hand in hand, as is abundantly shown in the great class of organic dyes. Both of these phenomena are due to the same cause, namely the weakness of the constraints acting upon one or more electrons.
+</p>
+
+<p>
+    It has frequently been noticed that there is a striking parallelism between color and the possibility of tautomeric change, and it has been assumed by some that color is in some way due to an alternation between two extreme tautomeric forms. But this is not precisely the case. When electrons are sufficiently free to produce absorption in the visible spectrum, that part of the molecule in which they are will always be highly polar and reactive, and there will be opportunity for free transition from one limiting form to another. Thus if a tautomeric process consists chiefly in the movement of electrons, there will be electrons in some molecules which are hung by loose constraints between the two extreme forms, and these are the electrons which will have a sufficiently low characteristic frequency to produce color.
+</p>
+
+<p>
+    In the class of elements which have not been considered in the present paper many are found, such as manganese and cobalt, which give a great variety of colored compounds. The difficulty in interpreting the compounds of these elements in terms of the present theory lies, I believe, in the fact that the kernel of the atom is not uniquely and permanently defined. It seems probable that in these elements there is a possibility of the transfer of electrons either from one part of the kernel to another, or between the kernel and the outer shell, or possibly between two separate outer shells of the same atom, and that electrons which are suspended midway between two such stages are responsible for the absorption of light in these cases.
+</p>
+
+<br><br><br><br><br>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,9 @@
 title: 람다 산법 (Lambda Calculus)
-stylesheet: "style.css"
+stylesheet: "/style.css"
 
 defaults:
+    scope:
+        path: ""
+        type: "pages"
     values:
         layout: "default"

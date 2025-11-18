@@ -2,93 +2,93 @@
 
 <html>
 <head>
-<title>
-    Lewis, G. N. (1916). The Atom and the Molecule
-</title>
+    <title>
+        Lewis, G. N. (1916). The Atom and the Molecule
+    </title>
+
+    <style>
+
+        /* === body === */
+    
+        body {
+            font-family: "Noto Serif", serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    
+    
+        /* === figure === */
+    
+        figure {
+            text-align: center; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+    
+    
+        /* === .lewis-strc === */
+        /* ab = abbreviation */
+        /* ol = one-letter */
+        /* b = bold */
+    
+        .lewis-strc {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .lewis-strc.ab { line-height: unset; }
+        .lewis-strc.ol { line-height: 1.3; }
+    
+        .lewis-strc span {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            width: 1.5em;
+        }
+        .lewis-strc.ab span { width: unset; }
+        .lewis-strc.ol span { width: 1em; }
+        .lewis-strc.b span { font-weight: bold; }
+    
+        /* uet = unpaired-elctron-top
+           ueb = unpaired-elctron-bottom
+           ept = electron-pair-top
+           epb = electron-pair-bottom */
+        .lewis-strc span.uet::before,
+        .lewis-strc span.ueb::after {
+            content: "·";
+        }
+        .lewis-strc span.ept::before,
+        .lewis-strc span.epb::after {
+            content: "··";
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: normal;
+        }
+        .lewis-strc span.uet::before,
+        .lewis-strc span.ueb::after,
+        .lewis-strc span.ept::before,
+        .lewis-strc span.epb::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: normal;
+        }
+        .lewis-strc span.uet::before { top:    -0.9em; }
+        .lewis-strc span.ueb::after  { bottom: -0.9em; }
+        .lewis-strc span.ept::before { top:    -0.9em; }
+        .lewis-strc span.epb::after  { bottom: -0.9em; }
+        .lewis-strc.ol span.uet::before { top:    -0.65em; }
+        .lewis-strc.ol span.ueb::after  { bottom: -0.65em; }
+        .lewis-strc.ol span.ept::before { top:    -0.65em; }
+        .lewis-strc.ol span.epb::after  { bottom: -0.65em; }
+    
+    </style>
 </head>
-
-<style>
-
-    /* === body === */
-
-    body {
-        font-family: "Noto Serif", serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-
-
-    /* === figure === */
-
-    figure {
-        text-align: center; 
-        margin-left: auto; 
-        margin-right: auto;
-    }
-
-
-    /* === .lewis-strc === */
-    /* ab = abbreviation */
-    /* ol = one-letter */
-    /* b = bold */
-
-    .lewis-strc {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        line-height: 1.8;
-    }
-    .lewis-strc.ab { line-height: unset; }
-    .lewis-strc.ol { line-height: 1.3; }
-
-    .lewis-strc span {
-        display: inline-block;
-        position: relative;
-        text-align: center;
-        width: 1.5em;
-    }
-    .lewis-strc.ab span { width: unset; }
-    .lewis-strc.ol span { width: 1em; }
-    .lewis-strc.b span { font-weight: bold; }
-
-    /* uet = unpaired-elctron-top
-       ueb = unpaired-elctron-bottom
-       ept = electron-pair-top
-       epb = electron-pair-bottom */
-    .lewis-strc span.uet::before,
-    .lewis-strc span.ueb::after {
-        content: "·";
-    }
-    .lewis-strc span.ept::before,
-    .lewis-strc span.epb::after {
-        content: "··";
-        position: absolute;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-weight: normal;
-    }
-    .lewis-strc span.uet::before,
-    .lewis-strc span.ueb::after,
-    .lewis-strc span.ept::before,
-    .lewis-strc span.epb::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-weight: normal;
-    }
-    .lewis-strc span.uet::before { top:    -0.9em; }
-    .lewis-strc span.ueb::after  { bottom: -0.9em; }
-    .lewis-strc span.ept::before { top:    -0.9em; }
-    .lewis-strc span.epb::after  { bottom: -0.9em; }
-    .lewis-strc.ol span.uet::before { top:    -0.65em; }
-    .lewis-strc.ol span.ueb::after  { bottom: -0.65em; }
-    .lewis-strc.ol span.ept::before { top:    -0.65em; }
-    .lewis-strc.ol span.epb::after  { bottom: -0.65em; }
-
-</style>
 
 <body>
 
